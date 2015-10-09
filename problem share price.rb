@@ -1,3 +1,5 @@
+require_relative 'lib/test_frame'
+
 def share_price(invested, changes)
   changes.each do |change|
     invested += (invested * change / 100.0).to_f
@@ -8,11 +10,11 @@ end
 
 
 
-# Test.assert_equals(share_price(100, []), '100.00')
-# Test.assert_equals(share_price(100, [-50, 50]), '75.00')
-# Test.assert_equals(share_price(100, [-50, 100]), '100.00')
-# Test.assert_equals(share_price(100, [-20, 30]), '104.00')
-# Test.assert_equals(share_price(1000, [0, 2, 3, 6]), '1113.64')
+Test.assert_equals(share_price(100, []), '100.00')
+Test.assert_equals(share_price(100, [-50, 50]), '75.00')
+Test.assert_equals(share_price(100, [-50, 100]), '100.00')
+Test.assert_equals(share_price(100, [-20, 30]), '104.00')
+Test.assert_equals(share_price(1000, [0, 2, 3, 6]), '1113.64')
 
 
 # Share price
