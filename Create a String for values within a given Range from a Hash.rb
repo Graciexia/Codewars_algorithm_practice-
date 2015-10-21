@@ -28,7 +28,14 @@ Test.assert_equals(list_in_range(food, (0.99..1.99)), "Cheese (0.99), Fries (1.4
 #   return arr.join(", ")
 # end
 
-
+# most compact
+# def list_in_range(hash, range)
+#   hash
+#     .select { |k, v| range.include?(v) }
+#     .sort_by { |k, v| v }
+#     .map { |k, v| "#{k} (#{v})" }
+#     .join(", ")
+# end
 
 # Complete the solution so that it returns a String in the format:
 #
